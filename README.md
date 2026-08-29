@@ -61,6 +61,32 @@ The project demonstrates a simulated drone navigating through
 an obstacle-filled environment and dynamically changing its
 path when a new obstacle is detected.
 
+## 📊 Performance Results
+
+The navigation system was evaluated using a simulated
+15 × 15 occupancy-grid environment.
+
+| Metric | Result |
+|---|---:|
+| Path Planning Algorithm | A* |
+| Initial Path Length | 29 cells |
+| Initial Planning Time | 4.9336 ms |
+| Dynamic Replanning Time | 2.9582 ms |
+| Collision-Free | True |
+| Dynamic Path Found | True |
+
+### Dynamic Replanning
+
+A new obstacle was introduced at position `(8, 8)` while
+the simulated drone was navigating.
+
+The system successfully detected the environmental change
+and generated a new collision-free path to the goal.
+
+- New path length: **15 cells**
+- Replanning time: **2.9582 ms**
+- New path found: **Yes**
+
 ## Future Improvements
 
 - Real-time video input
